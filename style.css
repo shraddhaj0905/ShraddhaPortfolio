@@ -1,0 +1,575 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #07111F;
+    color: #E6F1FF;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(7, 17, 31, 0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1E3448;
+}
+
+.nav-container {
+    max-width: 1100px;
+    height: 70px;
+    margin: auto;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Space Mono", monospace;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #22D3EE;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #91A4B7;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #22D3EE;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    max-width: 1100px;
+    margin: auto;
+    padding: 150px 25px 100px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 65px;
+
+    /* Shift image + content slightly to the right */
+    padding-left: 35px;
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.profile-image {
+    flex-shrink: 0;
+
+    /* Bigger image */
+    width: 190px;
+    height: 190px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 3px solid #22D3EE;
+
+    box-shadow:
+        0 0 25px rgba(34, 211, 238, 0.15);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero-text-content {
+    flex: 1;
+}
+
+.intro {
+    color: #22D3EE;
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 90px);
+    line-height: 1;
+    margin-bottom: 20px;
+    color: #E6F1FF;
+}
+
+.hero h2 {
+    color: #91A4B7;
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 400;
+}
+
+.hero h2 span {
+    color: #22D3EE;
+}
+
+.hero-text {
+    max-width: 650px;
+    color: #91A4B7;
+    font-size: 17px;
+    margin-top: 25px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    padding: 13px 22px;
+    border: 1px solid #1E3448;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: #22D3EE;
+    color: #07111F;
+    border-color: #22D3EE;
+    font-weight: 600;
+}
+
+.btn.primary:hover {
+    background: #06B6D4;
+    border-color: #06B6D4;
+}
+
+.btn.secondary {
+    color: #E6F1FF;
+}
+
+.btn.secondary:hover {
+    background: #0D1B2A;
+    border-color: #22D3EE;
+}
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 110px 25px 80px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.section-heading span {
+    color: #22D3EE;
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+    color: #E6F1FF;
+}
+
+.section-heading::after {
+    content: "";
+    height: 1px;
+    background: #1E3448;
+    flex: 1;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+    max-width: 800px;
+}
+
+.about-content p {
+    color: #91A4B7;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-card {
+    background: #0D1B2A;
+    border: 1px solid #1E3448;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    border-color: #22D3EE;
+    transform: translateY(-3px);
+}
+
+.experience-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.experience-top h3 {
+    font-size: 21px;
+    color: #E6F1FF;
+}
+
+.company {
+    color: #22D3EE;
+    margin-top: 6px;
+}
+
+.date {
+    color: #64788A;
+    font-family: "Space Mono", monospace;
+}
+
+.experience-card ul {
+    padding-left: 20px;
+}
+
+.experience-card li {
+    color: #91A4B7;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    min-height: 330px;
+    padding: 30px;
+    background: #0D1B2A;
+    border: 1px solid #1E3448;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #22D3EE;
+
+    box-shadow:
+        0 10px 30px rgba(34, 211, 238, 0.08);
+}
+
+.project-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.folder {
+    color: #22D3EE;
+    font-size: 30px;
+}
+
+.project-link {
+    color: #91A4B7;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    color: #22D3EE;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #E6F1FF;
+}
+
+.project-card p {
+    color: #91A4B7;
+    line-height: 1.7;
+    flex: 1;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.technologies span {
+    padding: 6px 9px;
+    background: #10263A;
+    color: #7DD3FC;
+    border: 1px solid #1E3448;
+
+    font-family: "Space Mono", monospace;
+    font-size: 11px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-box {
+    background: #0D1B2A;
+    border: 1px solid #1E3448;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.skill-box:hover {
+    border-color: #22D3EE;
+}
+
+.skill-box h3 {
+    color: #22D3EE;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-list span {
+    padding: 8px 12px;
+    border: 1px solid #1E3448;
+    background: #10263A;
+    color: #B7C8D8;
+    font-size: 13px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding-bottom: 120px;
+}
+
+.contact-content {
+    max-width: 700px;
+}
+
+.contact-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #E6F1FF;
+}
+
+.contact-content p {
+    color: #91A4B7;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.social-links a {
+    color: #91A4B7;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #1E3448;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #22D3EE;
+    border-color: #22D3EE;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 25px;
+
+    border-top: 1px solid #1E3448;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #64788A;
+    font-size: 13px;
+}
+
+footer strong {
+    color: #91A4B7;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+
+        /* Remove desktop shift */
+        padding-left: 0;
+    }
+
+    .profile-image {
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-content h2 {
+        font-size: 30px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        width: fit-content;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .hero {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .profile-image {
+        width: 110px;
+        height: 110px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .project-card {
+        padding: 22px;
+    }
+
+    .experience-card {
+        padding: 22px;
+    }
+}
+
